@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна №4 - Тест JS (Варіант 14)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <p>Група: ТР-43 | ПІБ: Халаминдик Анастасія</p>
+            <h1>Тест</h1>
+            <h2>ТЕМА: СТРІЛКОВІ ФУНКЦІЇ ТА ДЕСТРУКТУРИЗАЦІЯ</h2>
+        </div>
+    </header>
+
+    <main>
+        <form id="user-info-form" class="card">
+            <h3>Введіть Ваші дані та оберіть рівень для початку тесту</h3>
+            
+            <div class="form-group">
+                <label for="name-input">Ім'я:</label>
+                <input type="text" id="name-input" name="username" required minlength="2" placeholder="Ваше ім'я"> 
+            </div>
+            
+            <div class="form-group">
+                <label for="group-input">Група:</label>
+                <select id="group-input" name="usergroup" required>
+                    <option value="">-- Оберіть групу --</option>
+                    <option value="ТР-41">ТР-41</option>
+                    <option value="ТР-42">ТР-42</option>
+                    <option value="ТР-43">ТР-43</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="level-select">Рівень складності:</label>
+                <select id="level-select" name="level" required>
+                    <option value="">-- Оберіть рівень --</option>
+                    <option value="initial">Початковий</option>
+                    <option value="medium">Середній</option>
+                    <option value="hard">Складний</option>
+                </select>
+            </div>
+            
+            <button type="submit" id="start-button">Розпочати тест</button>
+            <div id="validation-message" class="error-message"></div>
+        </form>
+
+        <form id="quiz-form" class="card" style="display:none;">
+            <div id="quiz-container">
+            </div>
+            
+            <button type="submit" id="finish-button" style="display:none;">Завершити тест</button>
+        </form>
+
+        <div id="results" class="card" style="display:none;">
+            <h3>Результати тесту</h3>
+            <p id="final-score"></p>
+            <p id="local-storage-info"></p>
+            
+            <!-- Історія результатів -->
+            <div id="storage-history" style="margin-top: 30px;"></div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
